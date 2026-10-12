@@ -18,6 +18,12 @@
     projectsEyebrow: '01 / Selected work', projectsTitle: 'The projects speak.', projectsText: 'From data exploration to model building — academic and co-op training projects.',
     filterLabel: 'Filter projects', filterAll: 'All', filterBi: 'Business Intelligence', filterMl: 'Machine Learning', filterSim: 'Simulation',
     explore: 'Explore project ↗',
+    pPortTag: 'Business Intelligence', pPortTitle: 'Port Performance Analytics Dashboard', pPortText: 'Which ships move the world’s cargo? Daily IMF PortWatch data shows dry bulk carriers make 15% of port calls but carry 45% of all cargo tonnage.', pPortM1: 'Daily records analyzed', pPortM2: 'Ports in 180 countries',
+    pPortMore: 'Cleaned and validated 3.5 million daily port records (2019–2024) with Python, then built a one-page interactive dashboard: KPI cards, a monthly trend, port and country rankings, a vessel-type breakdown and a zoomable port map — every filter updates every visual. Built with Claude Artifacts, with every number checked against the source data. Public IMF PortWatch data, not company data.',
+    pPortLink: 'Open the interactive dashboard', pPortNote: 'Personal project · public data',
+    pHrTag: 'Business Intelligence', pHrTitle: 'HR Attendance & Performance Analytics', pHrText: 'A deployed web system that turns raw time-clock punches and monthly evaluations into trustworthy HR metrics — in English and Arabic.', pHrM1: 'Automated tests passing', pHrM2: 'Employees (synthetic data)',
+    pHrMore: 'A live “Today” attendance board, leave and correction approvals, monthly PDF reports, an ML early-warning model, a Power BI kit with row-level security (RLS) and four permission-based roles. Free hosting: the first visit may take about a minute to wake up.',
+    pHrNote: 'Personal project · live system',
     p1Tag: 'Business Intelligence', p1Title: 'Sales Performance & Customer Profitability', p1Text: 'Two dashboards analyzing sales and profit, flagging the risk of discounts eroding profit margin in the consumer segment.', p1m1: 'Dashboards', p1m2: 'DAX measures',
     p1More: 'Cleaned the data with Power Query and built a star schema with three dimension tables. Measures included total sales, profit, profit margin and sales per customer, with three documented KPIs and executive summaries.',
     p2Tag: 'Content Analytics', p2Title: 'Netflix Content Strategy', p2Text: 'Analyzed 8,000+ titles to turn content data into a clear strategic summary.', p2m1: 'Titles analyzed', p2m2: 'Interactive slicers',
@@ -35,12 +41,8 @@
     certsEyebrow: '04 / Continuous learning', certsTitle: 'Certifications & courses.', certsText: '11 certifications and courses completed across 2025 and 2026 in business intelligence, data science and cloud.',
     pauseCerts: 'Pause motion Ⅱ', playCerts: 'Play motion ↻',
     navNew: 'New',
-    roadEyebrow: '05 / Latest work', roadTitle: 'A new project, live now.', roadText: 'A complete, deployed system — try it yourself, no sign-up.',
-    spotNew: 'New · Live', spotTag: 'HR Analytics', spotTitle: 'HR Attendance & Performance Analytics',
-    spotText: 'Turns raw time-clock punches and monthly evaluations into trustworthy HR metrics: a live “Today” attendance board, leave and correction approvals, monthly PDF reports, an ML early-warning model and a Power BI kit — in English and Arabic.',
-    spotS1: 'Automated tests passing', spotS2: 'Permission-based roles', spotS3: 'Employees (synthetic data)',
-    spotDemo: 'Try the live demo', spotCode: 'Code on GitHub', spotNote: 'Free hosting: the first visit may take about a minute to wake up.',
-    spotOpen: 'Open the live demo', spotAlt: 'The Today attendance board in the HR analytics system',
+    roadEyebrow: '05 / Roadmap', roadTitle: 'What’s next.', roadText: 'Upcoming projects and certifications.',
+    spotDemo: 'Try the live demo', spotCode: 'Code on GitHub',
  road1Tag: 'Upcoming projects', road1Title: 'The next chapter of my work', road1Text: 'New projects, their goals and progress will be added here once announced.',
     road2Tag: 'Planned certifications', road2Title: 'Learning that builds on experience', road2Text: 'Target certifications and timelines will appear here once the next learning plan is set.',
     contactEyebrow: '06 / Get in touch', contactTitle: 'Let’s turn data<br>into <em>value.</em>', contactText: 'Have an opportunity in data analytics or business intelligence? I’d love to hear from you.',
@@ -52,6 +54,7 @@
   const AR = {
     pauseCerts: 'إيقاف الحركة Ⅱ', playCerts: 'تشغيل الحركة ↻', copied: 'تم نسخ البريد الإلكتروني', copyFail: 'تعذّر النسخ التلقائي. يمكنك تحديد البريد ونسخه يدويًا.',
     dialogHeading: 'ما الذي يتضمنه المشروع؟', dialogNote: 'مشروع أكاديمي / تدريب تعاوني',
+    pPortNote: 'مشروع شخصي · بيانات عامة', pHrNote: 'مشروع شخصي · نظام منشور',
     showing: (n, t) => `المشاريع المعروضة: ${n} من ${t}`,
   };
   const META = {
@@ -207,9 +210,9 @@
       title,
       $(':scope > p', card).cloneNode(true),
       el('h3', { textContent: t('dialogHeading') }),
-      $('.project-more p', card).cloneNode(true),
+      ...[...$('.project-more', card).children].map(node => node.cloneNode(true)),
       ...(extra ? [extra.cloneNode(true)] : []),
-      el('p', { className: 'muted', textContent: t('dialogNote') }),
+      el('p', { className: 'muted', textContent: t(card.dataset.note || 'dialogNote') }),
     );
     dialogPos.textContent = `${index + 1} / ${list.length}`;
     prevBtn.disabled = index <= 0;
