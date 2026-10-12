@@ -151,6 +151,9 @@ h3{font-size:clamp(21px,2.2vw,26px);line-height:1.45;margin:12px 0}
 .project-open{margin-top:auto;display:flex;justify-content:space-between;width:100%;border:0;border-top:1px solid #392946;padding:16px 0 0;background:none;color:#d2b7f6;font-size:15px;text-align:start}
 .project-open:hover{color:#fff}
 .project.is-hidden{display:none}
+/* Featured card with a browser-framed screenshot: text on one side, image on the other */
+.project.has-shot{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,48px);align-items:center}
+.project-copy{display:flex;flex-direction:column;align-self:stretch}
 
 /* Dialog */
 .project-dialog{width:min(680px,100% - 32px);max-height:88dvh;padding:0;border:1px solid #684686;border-radius:22px;background:radial-gradient(ellipse at 100% 0%,#35204d,#100a1c 65%);color:#eee6fa;box-shadow:0 25px 100px #000a;overscroll-behavior:contain}
@@ -286,6 +289,8 @@ body.modal-open{overflow:hidden}
   .skill-grid{grid-template-columns:1fr 1fr}
   .roadmap .spotlight{grid-template-columns:1fr}
   .spot-shot,[dir=ltr] .spot-shot{transform:none}
+  .project.has-shot{grid-template-columns:1fr}
+  .project.has-shot .spot-shot{order:-1}
 }
 @media (max-width:640px){
   .wrap{width:calc(100% - 32px)}
