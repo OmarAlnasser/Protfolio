@@ -30,6 +30,7 @@
     pNfxTag: 'Business Intelligence', pNfxTitle: 'Netflix Catalog Dashboard: a full rebuild', pNfxText: 'A three-page Power BI report rebuilt after a model audit found titles counted more than once (10,852 rows for 8,807 titles) and genre and country filters that changed nothing.', pNfxM1: 'Titles after cleanup', pNfxM2: 'DAX measures',
     pNfxMore: 'Reshaped the main table to one row per title, added genre and country dimension tables behind bridge tables so the filters work, fixed 13 DAX measures and added new ones with no hard-coded years, so year-over-year growth follows the selected year. Three pages: Catalog Overview, Content Breakdown, and Growth & Strategy. A dark, Netflix-inspired design uses a single red accent for the number that matters in each chart, with every colour contrast-checked. Unofficial personal project, not affiliated with Netflix; public data from Kaggle.',
     pNfxNote: 'Personal project · public data',
+    pNfxPdf: 'View the pages (PDF)', pNfxPbix: 'Download the Power BI file',
     pNfxAlt: 'Netflix Catalog Overview page: KPI cards, titles added per year with 2021 highlighted in red, and the top 10 genres',
     p3Tag: 'Machine Learning', p3Title: 'Titanic Survival Prediction', p3Text: 'An end-to-end machine learning pipeline, from feature engineering to model comparison and evaluation.',
     p3More: 'Prepared features and compared Logistic Regression with Random Forest to predict survival. The project focuses on the full workflow of building a machine learning model.',
