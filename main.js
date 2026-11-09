@@ -27,8 +27,10 @@
     pHrNote: 'Personal project · live system',
     p1Tag: 'Business Intelligence', p1Title: 'Sales Performance & Customer Profitability', p1Text: 'Two dashboards analyzing sales and profit, flagging the risk of discounts eroding profit margin in the consumer segment.', p1m1: 'Dashboards', p1m2: 'DAX measures',
     p1More: 'Cleaned the data with Power Query and built a star schema with three dimension tables. Measures included total sales, profit, profit margin and sales per customer, with three documented KPIs and executive summaries.',
-    p2Tag: 'Content Analytics', p2Title: 'Netflix Content Strategy', p2Text: 'Analyzed 8,000+ titles to turn content data into a clear strategic summary.', p2m1: 'Titles analyzed', p2m2: 'Interactive slicers',
-    p2More: 'Built a star-schema data model, added DAX measures and four interactive slicers for exploration, and prepared a three-point strategic summary.',
+    pNfxTag: 'Business Intelligence', pNfxTitle: 'Netflix Catalog Dashboard: a full rebuild', pNfxText: 'A three-page Power BI report rebuilt after a model audit found titles counted more than once (10,852 rows for 8,807 titles) and genre and country filters that changed nothing.', pNfxM1: 'Titles after cleanup', pNfxM2: 'DAX measures',
+    pNfxMore: 'Reshaped the main table to one row per title, added genre and country dimension tables behind bridge tables so the filters work, fixed 13 DAX measures and added new ones with no hard-coded years, so year-over-year growth follows the selected year. Three pages: Catalog Overview, Content Breakdown, and Growth & Strategy. A dark, Netflix-inspired design uses a single red accent for the number that matters in each chart, with every colour contrast-checked. Unofficial personal project, not affiliated with Netflix; public data from Kaggle.',
+    pNfxNote: 'Personal project · public data',
+    pNfxAlt: 'Netflix Catalog Overview page: KPI cards, titles added per year with 2021 highlighted in red, and the top 10 genres',
     p3Tag: 'Machine Learning', p3Title: 'Titanic Survival Prediction', p3Text: 'An end-to-end machine learning pipeline, from feature engineering to model comparison and evaluation.',
     p3More: 'Prepared features and compared Logistic Regression with Random Forest to predict survival. The project focuses on the full workflow of building a machine learning model.',
     p4Tag: 'Decision Support', p4Title: 'Decision Support System Simulation', p4Text: 'Understanding system performance under varying loads and delivering a practical improvement recommendation.', p4c1: 'Performance simulation', p4c2: 'System optimization',
@@ -56,7 +58,7 @@
   const AR = {
     pauseCerts: 'إيقاف الحركة Ⅱ', playCerts: 'تشغيل الحركة ↻', copied: 'تم نسخ البريد الإلكتروني', copyFail: 'تعذّر النسخ التلقائي. يمكنك تحديد البريد ونسخه يدويًا.',
     dialogHeading: 'ما الذي يتضمنه المشروع؟', dialogNote: 'مشروع أكاديمي / تدريب تعاوني',
-    pPortNote: 'مشروع شخصي · بيانات عامة', pHrNote: 'مشروع شخصي · نظام منشور',
+    pPortNote: 'مشروع شخصي · بيانات عامة', pHrNote: 'مشروع شخصي · نظام منشور', pNfxNote: 'مشروع شخصي · بيانات عامة',
     showing: (n, t) => `المشاريع المعروضة: ${n} من ${t}`,
   };
   const META = {

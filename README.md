@@ -10,7 +10,7 @@ Static site: no build step, works on GitHub Pages.
 | `index.html` | All content. Arabic text is written directly in the HTML. |
 | `main.js` | English translations (`EN` object) and interactions: language switch, mobile menu, project filters and dialog, certificate marquee, copy email. |
 | `styles.css` | All styles; colour tokens are at the top under `:root`. |
-| `assets/` | Images (HR project screenshots, one per language). |
+| `assets/` | Project screenshots (port dashboard, Netflix dashboard, HR system in each language). |
 | `Omar-Hamad-Al-Nasser-CV.pdf` | Downloadable CV. |
 
 ## Editing content
