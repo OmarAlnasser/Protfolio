@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=20261109b">
+  <link rel="stylesheet" href="styles.css?v=20261109c">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -198,23 +198,35 @@
         </a>
       </article>
 
+      <article class="project featured has-shot" data-category="ml" data-note="pTitNote">
+        <div class="project-copy">
+          <div class="project-top"><span class="tag" data-i18n="pTitTag">التعلم الآلي</span><span class="number">04</span></div>
+          <span class="overline" dir="ltr">PYTHON · PANDAS · SCIKIT-LEARN · MATPLOTLIB</span>
+          <h3 data-i18n="pTitTitle">التنبؤ بالنجاة في <span dir="ltr">Titanic</span></h3>
+          <p data-i18n="pTitText">من نجا من غرق Titanic، وما مدى دقة النموذج في التنبؤ بذلك؟ نجت 97% من نساء الدرجة الأولى مقابل 14% فقط من رجال الدرجة الثالثة، ويتنبأ النموذج بالنتيجة بدقة 82.7% لركاب لم يرهم أثناء التدريب.</p>
+          <dl class="metrics"><div><dd>82.7%</dd><dt data-i18n="pTitM1">دقة على بيانات اختبار منفصلة</dt></div><div><dd>0.862</dd><dt data-i18n="pTitM2">مساحة منحنى ROC</dt></div></dl>
+          <div class="project-more" hidden>
+            <p data-i18n="pTitMore">أُعيد بناء المشروع على بيانات Kaggle الأصلية (891 راكبًا) بعد اكتشاف أن النسخة الأولى استخدمت بيانات اصطناعية. يملأ خط المعالجة القيم الناقصة داخل كل طية تحقق حتى لا تتسرب المعلومات، ويضيف خصائص مثل اللقب وحجم العائلة وسطح المقصورة وعدد من يشاركون التذكرة. قورنت أربعة نماذج (الانحدار اللوجستي، والغابة العشوائية، والتعزيز التدريجي، وSVM) بتحقق متقاطع خماسي مكرر ثلاث مرات، ثم جُمعت في نموذج تصويت قُيّم على 20% من البيانات لم يرها أثناء التدريب. يتضمن المشروع ملف توقعات جاهزًا للتقديم في Kaggle.</p>
+            <div class="spot-actions">
+              <a class="button primary" href="https://github.com/OmarAlnasser/Titanic-Survival-Prediction/blob/main/Titanic_Survival_Prediction.ipynb" target="_blank" rel="noopener noreferrer"><span data-i18n="pTitNb">افتح دفتر Jupyter</span> <span aria-hidden="true">↗</span></a>
+              <a class="button ghost" href="https://github.com/OmarAlnasser/Titanic-Survival-Prediction" target="_blank" rel="noopener noreferrer"><span data-i18n="spotCode">الكود على GitHub</span> <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <button type="button" class="project-open" aria-haspopup="dialog" data-i18n="explore">استكشف المشروع ↗</button>
+        </div>
+        <a class="spot-shot" href="https://github.com/OmarAlnasser/Titanic-Survival-Prediction" target="_blank" rel="noopener noreferrer" aria-label="الكود على GitHub" data-i18n-attr="aria-label:spotCode">
+          <span class="browser-bar" dir="ltr" aria-hidden="true"><i></i><i></i><i></i><span>github.com/OmarAlnasser/Titanic-Survival-Prediction</span></span>
+          <img src="assets/titanic-results.webp" width="1100" height="728" loading="lazy" decoding="async" alt="نتائج مشروع Titanic: دقة 82.7% وROC AUC 0.862، ونسب النجاة حسب الدرجة والجنس، ومقارنة أربعة نماذج، وأهم الخصائص" data-i18n-attr="alt:pTitAlt">
+        </a>
+      </article>
+
       <article class="project" data-category="bi">
-        <div class="project-top"><span class="tag" data-i18n="p1Tag">ذكاء الأعمال</span><span class="number">04</span></div>
+        <div class="project-top"><span class="tag" data-i18n="p1Tag">ذكاء الأعمال</span><span class="number">05</span></div>
         <span class="overline" dir="ltr">POWER BI · DAX · DATA MODELING</span>
         <h3 data-i18n="p1Title">أداء المبيعات وربحية العملاء</h3>
         <p data-i18n="p1Text">لوحتان لتحليل المبيعات والأرباح، مع رصد مخاطر تأثير الخصومات على هامش الربح في شريحة المستهلكين.</p>
         <dl class="metrics"><div><dd>02</dd><dt data-i18n="p1m1">لوحات معلومات</dt></div><div><dd>8+</dd><dt data-i18n="p1m2">مقاييس DAX</dt></div></dl>
         <div class="project-more" hidden><p data-i18n="p1More">تنظيف البيانات باستخدام Power Query وبناء نموذج نجمي بثلاثة جداول أبعاد. تضمنت المقاييس إجمالي المبيعات والربح وهامش الربح والمبيعات لكل عميل، مع توثيق ثلاثة مؤشرات أداء وملخصات تنفيذية.</p></div>
-        <button type="button" class="project-open" aria-haspopup="dialog" data-i18n="explore">استكشف المشروع ↗</button>
-      </article>
-
-      <article class="project" data-category="ml">
-        <div class="project-top"><span class="tag" data-i18n="p3Tag">التعلم الآلي</span><span class="number">05</span></div>
-        <span class="overline" dir="ltr">PYTHON · SCIKIT-LEARN</span>
-        <h3 data-i18n="p3Title">التنبؤ بالنجاة في Titanic</h3>
-        <p data-i18n="p3Text">مسار تعلم آلي متكامل، من هندسة الخصائص إلى مقارنة النماذج وتقييمها.</p>
-        <ul class="chips" dir="ltr"><li>Logistic Regression</li><li>Random Forest</li><li>Feature Engineering</li></ul>
-        <div class="project-more" hidden><p data-i18n="p3More">تجهيز الخصائص ومقارنة نموذج الانحدار اللوجستي بنموذج الغابة العشوائية للتنبؤ بالنجاة. يركز المشروع على دورة العمل الكاملة لبناء نموذج تعلم آلي.</p></div>
         <button type="button" class="project-open" aria-haspopup="dialog" data-i18n="explore">استكشف المشروع ↗</button>
       </article>
 
@@ -381,6 +393,6 @@
   </div>
 </dialog>
 
-<script src="main.js?v=20261109b"></script>
+<script src="main.js?v=20261109c"></script>
 </body>
 </html>
