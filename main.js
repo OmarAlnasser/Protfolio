@@ -32,8 +32,10 @@
     pNfxNote: 'Personal project · public data',
     pNfxPdf: 'View the pages (PDF)', pNfxPbix: 'Download the Power BI file',
     pNfxAlt: 'Netflix Catalog Overview page: KPI cards, titles added per year with 2021 highlighted in red, and the top 10 genres',
-    p3Tag: 'Machine Learning', p3Title: 'Titanic Survival Prediction', p3Text: 'An end-to-end machine learning pipeline, from feature engineering to model comparison and evaluation.',
-    p3More: 'Prepared features and compared Logistic Regression with Random Forest to predict survival. The project focuses on the full workflow of building a machine learning model.',
+    pTitTag: 'Machine Learning', pTitTitle: 'Titanic Survival Prediction', pTitText: 'Who survived the Titanic, and how well can a model predict it? 97% of first-class women survived against 14% of third-class men, and the model predicts the outcome with 82.7% accuracy for passengers it never saw in training.', pTitM1: 'Accuracy on a separate hold-out set', pTitM2: 'ROC AUC',
+    pTitMore: 'Rebuilt on the original Kaggle data (891 passengers) after finding that the first version used synthetic data. The pipeline fills missing values inside each cross-validation fold so nothing leaks, and adds features such as title, family size, cabin deck and shared-ticket group size. Four models (Logistic Regression, Random Forest, Gradient Boosting and an SVM) were compared with 5-fold cross-validation repeated three times, then combined into a voting ensemble evaluated on 20% of the data it never saw. Includes a Kaggle-ready submission file.',
+    pTitNb: 'Open the Jupyter notebook', pTitNote: 'Co-op project · rebuilt on real data',
+    pTitAlt: 'Titanic project results: 82.7% accuracy and 0.862 ROC AUC, survival by class and sex, a four-model comparison and the most important features',
     p4Tag: 'Decision Support', p4Title: 'Decision Support System Simulation', p4Text: 'Understanding system performance under varying loads and delivering a practical improvement recommendation.', p4c1: 'Performance simulation', p4c2: 'System optimization',
     p4More: 'Used ARENA to simulate system performance as load changes, then studied the results to deliver a simulation-based improvement recommendation.',
     expEyebrow: '02 / Experience & education', expTitle: 'Academic foundation.<br>Practical application.', expText: 'I connect an understanding of business systems with analytical skills to turn questions into results people can understand and use.',
@@ -59,7 +61,7 @@
   const AR = {
     pauseCerts: 'إيقاف الحركة Ⅱ', playCerts: 'تشغيل الحركة ↻', copied: 'تم نسخ البريد الإلكتروني', copyFail: 'تعذّر النسخ التلقائي. يمكنك تحديد البريد ونسخه يدويًا.',
     dialogHeading: 'ما الذي يتضمنه المشروع؟', dialogNote: 'مشروع أكاديمي / تدريب تعاوني',
-    pPortNote: 'مشروع شخصي · بيانات عامة', pHrNote: 'مشروع شخصي · نظام منشور', pNfxNote: 'مشروع شخصي · بيانات عامة',
+    pPortNote: 'مشروع شخصي · بيانات عامة', pHrNote: 'مشروع شخصي · نظام منشور', pNfxNote: 'مشروع شخصي · بيانات عامة', pTitNote: 'مشروع تدريب تعاوني · أُعيد بناؤه على بيانات حقيقية',
     showing: (n, t) => `المشاريع المعروضة: ${n} من ${t}`,
   };
   const META = {
